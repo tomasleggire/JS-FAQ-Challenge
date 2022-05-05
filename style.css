@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img {
+    border-style: none;
+    max-width: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    font-family: 'Kumbh Sans';
+    font-size: 12px;
+
+}
+  
+.container {
+    width: 1050px;
+    height: 600px;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    border-radius: 30px;
+    -webkit-box-shadow: 1px 15px 15px -2px rgba(97,29,138,0.69); 
+box-shadow: 1px 15px 15px -2px rgba(97,29,138,0.69);
+}
+
+.box-1 {
+    display: flex;
+    overflow: hidden;
+    min-width: 50%;
+}
+
+.svg-1 {
+    align-self: center;
+    margin-left: -60px;
+}
+
+.svg-2 {
+    position: absolute;
+    margin-top: 265px;
+    margin-left: -95px;
+}
+
+.svg-3 {
+    position: relative;
+    margin-left: -965px;
+    margin-top: -265px;
+}
+
+.svg-1-mobile {
+    display: none;
+}
+
+.svg-2-mobile {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box-2 {
+    min-width: 50%;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: 900;
+    padding-top: 75px;
+    color: hsl(238, 29%, 16%);
+    margin-bottom: 40px;
+}
+
+
+.content-accordion {
+    position: relative;
+    width: 385px;
+    margin-bottom: 15px;
+    
+}
+
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.p-label {
+    color: hsl(237, 12%, 33%);
+    font-size: 14px;
+}
+
+.p-label:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+.content {
+    display: flex;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    color: hsl(240, 6%, 50%);
+}
+
+.content-accordion.active .content{
+    height: 45px;
+    padding-top: 10px;
+}
+
+.content-accordion.active #especial {
+    height: 57px;
+}
+
+.content-accordion.active .label .p-label {
+    font-weight: 900;
+
+}
+
+hr {
+    opacity: 0.3;
+    margin-top: 10px;
+}
+
+.svg-label {
+    transition: 0.5s;
+}
+
+.content-accordion.active .svg-label {
+    transform: rotate(180deg);
+}
+
+
+@media only screen and (max-width:850px){
+    .container {
+        flex-direction: column;
+        width: 330px;
+        height: 560px;
+        margin-bottom: -50px;
+    }
+    .svg-1, .svg-2, .svg-3 {
+        display: none;
+    }
+    .content-accordion {
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+    .svg-1-mobile {
+        display: flex;
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        margin: 35px;
+        margin-top: -140px;
+    }
+    .svg-2-mobile {
+        display: flex;
+        position: absolute;
+        margin-left: 39px;
+    }
+    .box-2 {
+        padding: 0 15px;
+        margin-top: 50px;
+        min-width: none;
+        overflow: hidden;
+    }
+    h1 {
+        text-align: center;
+    }
+}
